@@ -27,13 +27,9 @@ import openai
 _ = load_dotenv(find_dotenv())  # read local .env file
 openai.api_key = os.environ['OPENAI_API_KEY']
 
-def calculate_cylinder_volume(radius, height):
-    """
-    Calculate the volume of a cylinder using the formula:
-    Volume = π * r^2 * h
-    """
+def calculate_cylinder_volume(radius, height): 
     if radius <= 0 or height <= 0:
-        return "Radius and height must be positive numbers."
+        return "Enter a valid value."
     
     volume = math.pi * (radius ** 2) * height
     return round(volume, 2)
